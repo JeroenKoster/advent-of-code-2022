@@ -22,12 +22,12 @@ void main() {
 
 10000
 """;
-  test('Day 1 example returns 24000', () {
+  test('Day 1 part 1 example returns 24000', () {
     final result = Day1.part1(example.split('\n'));
     expect(result, 24000);
   });
 
-  test('Day 1 input returns 66719', () async {
+  test('Day 1 part 1 actual returns 66719', () async {
     final file = File("test/data/day1_input.txt");
     final input = await file.readAsLines();
     final result = Day1.part1(input);
@@ -35,11 +35,17 @@ void main() {
     expect(result, 66719);
   });
 
-    test('Day 1 part 2 example returns 66719', () async {
-    final file = File("test/data/day1_input.txt");
-    final input = await file.readAsLines();
+  test('Day 1 part 2 example returns 45000', () async {
     final result = Day1.part2(example.split('\n'));
 
     expect(result, 45000);
+  });
+
+  test('Day 1 part 2 actual returns 198551', () async {
+    final file = File("test/data/day1_input.txt");
+    final input = await file.readAsLines();
+    final result = Day1.part2(input);
+
+    expect(result, 198551);
   });
 }
